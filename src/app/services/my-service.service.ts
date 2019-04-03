@@ -13,9 +13,13 @@ export class MyServiceService {
       { observe: 'response' });
   }
   public submitCommandDB2(command:String):Observable<{response: String}>{
-    console.log(command);
     // @ts-ignore
     return this.http.get<String>(`http://localhost:8080/api/student/initializeDB2/`+command,
+      { observe: 'response' });
+  }
+  public submitCommandFTP(command:String):Observable<{response: String}>{
+    // @ts-ignore
+    return this.http.get<String>(`http://localhost:8080/api/student/initializeFTP/`+command,
       { observe: 'response' });
   }
 }

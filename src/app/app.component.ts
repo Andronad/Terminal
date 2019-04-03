@@ -11,7 +11,9 @@ export class AppComponent {
   command = '';
   response= '';
   commanddb2='';
-  responsedb2=''
+  responsedb2='';
+  commandftp='';
+  responseftp='';
 
   constructor(private service: MyServiceService) {
   }
@@ -22,6 +24,10 @@ export class AppComponent {
   }
   clickdb2(): void {
     this.service.submitCommandDB2(this.commanddb2).subscribe(x => this.responsedb2=x.body.response);
+
+  }
+  clickftp(): void {
+    this.service.submitCommandFTP(this.commandftp).subscribe(x => this.responseftp=x.body.response);
 
   }
 }
