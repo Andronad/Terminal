@@ -9,12 +9,19 @@ import {MyServiceService} from "./services/my-service.service";
 export class AppComponent {
   title = 'angularTest2';
   command = '';
+  response= '';
+  commanddb2='';
+  responsedb2=''
 
   constructor(private service: MyServiceService) {
   }
 
   click(): void {
-    this.service.submitCommand(this.command).subscribe(x => console.log(x.body.response));
+    this.service.submitCommand(this.command).subscribe(x => this.response=x.body.response);
+
+  }
+  clickdb2(): void {
+    this.service.submitCommandDB2(this.commanddb2).subscribe(x => this.responsedb2=x.body.response);
 
   }
 }

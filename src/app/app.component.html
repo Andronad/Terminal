@@ -1,3 +1,12 @@
-<input type="text" [(ngModel)]="command">
-<button (click)="click()">IMS</button>
+<h1>IMS</h1>
+
+<p><input type="text" [(ngModel)]="command">
+  <button (click)="click()">Submit</button></p>
+<p><textarea rows="20" cols="120" name="text" [(ngModel)]="response" readonly></textarea></p>
+
+<h1>DB2</h1>
+
+<p><input type="text" [(ngModel)]="commanddb2">
+  <button (click)="clickdb2()">Submit</button></p>
+<p><textarea rows="20" cols="120" name="text" [(ngModel)]="responsedb2" readonly></textarea></p>
 

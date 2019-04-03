@@ -12,4 +12,10 @@ export class MyServiceService {
     return this.http.get<String>(`http://localhost:8080/api/student/initializeIMS/`+command,
       { observe: 'response' });
   }
+  public submitCommandDB2(command:String):Observable<{response: String}>{
+    console.log(command);
+    // @ts-ignore
+    return this.http.get<String>(`http://localhost:8080/api/student/initializeDB2/`+command,
+      { observe: 'response' });
+  }
 }
